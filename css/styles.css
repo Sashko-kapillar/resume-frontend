@@ -1,13 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #fafaf6;
   padding: 40px 40px 40px 40px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 0;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -57,20 +69,37 @@ ol {
 }
 
 .contacts-link {
+  display: flex;
   font-weight: 400;
   font-size: 14px;
   line-height: 171%;
-  text-decoration: underline;
   color: #2979ff;
+  align-items: center;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #ff5100;
+}
+
+.contacts-link:hover .contacts-svg,
+.contacts-link:focus .contacts-svg {
+  fill: #ff5100;
 }
 
 .contacts-item {
   margin-top: 0;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
 }
 
 .contacts-container {
   margin-bottom: 40px;
+}
+
+.contacts-svg {
+  margin-right: 20px;
+  fill: #000;
 }
 
 /* skills */
@@ -88,6 +117,7 @@ ol {
 }
 
 .skills-list {
+  flex-direction: column;
   padding-left: 24px;
 }
 
@@ -132,7 +162,7 @@ ol {
 
 /* My projects */
 
-.my-projects-container {
+.projects-container {
   margin-bottom: 40px;
 }
 
@@ -145,6 +175,12 @@ ol {
   margin-bottom: 8px;
 }
 
+.my-projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .my-projects-item {
   font-weight: 700;
   font-size: 14px;
@@ -153,17 +189,27 @@ ol {
 }
 
 .my-projects-list {
+  flex-direction: column;
   padding-left: 16px;
 }
 
 .my-projects-item-link {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 171%;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
+  /* text-decoration-skip-ink: none; */
   color: #005fff;
   margin-left: 16px;
+}
+
+.my-projects-item-link:hover,
+.my-projects-item-link:focus {
+  color: #ff5100;
+}
+
+.my-projects-item-link:hover,
+.my-projects-item-link:focus {
+  color: #ff5100;
 }
 
 .my-projects-item-tech {
@@ -217,6 +263,7 @@ ol {
 }
 
 .work-experience-duties-list {
+  flex-wrap: wrap;
   padding-left: 32px;
 }
 
@@ -225,6 +272,7 @@ ol {
   font-size: 14px;
   line-height: 171%;
   color: #595959;
+  letter-spacing: 0.02em;
   list-style-type: circle;
 }
 /* Education */
