@@ -77,10 +77,10 @@ a {
   align-items: center;
 }
 
-.contacts-link:hover,
+/* .contacts-link:hover,
 .contacts-link:focus {
   color: #ff5100;
-}
+} */
 
 .contacts-link:hover .contacts-svg,
 .contacts-link:focus .contacts-svg {
